@@ -1,0 +1,12 @@
+# Node.js の依存ディレクトリ
+node_modules/
+
+# React のビルド成果物
+build/
+
+# ログファイル
+*.log
+
+# OS 固有の不要ファイル
+.DS_Store
+Thumbs.db
