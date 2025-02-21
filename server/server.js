@@ -13,11 +13,11 @@ app.use(cors());
 app.use(express.json());
 
 // 例: MongoDB接続 (ローカル or Atlas)
-mongoose.connect('mongodb://localhost:27017/election-map');
-
-  then(() => {
+mongoose.connect('mongodb://localhost:27017/election-map')
+.then(() => {
   console.log('MongoDB connected.');
-}).catch((err) => {
+})
+.catch((err) => {
   console.error(err);
 });
 

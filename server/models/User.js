@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const UserSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  isApproved: { type: Boolean, default: false }, // 管理者承認済かどうか
-  role: { type: String, default: 'user' } // admin権限などをつけるなら
+  isApproved: { type: Boolean, default: false },
+  role: { type: String, default: 'user' }, // 追加：'user' または 'admin'
+  organizationId: { type: String } // 組織ID（任意）
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', UserSchema);
